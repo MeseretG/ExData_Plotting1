@@ -10,9 +10,9 @@ plot3 <- function(){
                                                     as.character(Time), format = "%Y %m %d %H %M $S")))
     png("plot3.png")
     plot(feb$DateTime, feb$Sub_metering_1, type = "n", ylab = "Eneregy sub metering", xlab = "") 
-    legend("topright", pch="-", col=c("gray", "red", "blue"), 
+    legend("topright", pch="-", col=c("black", "red", "blue"), 
            legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
-    lines(feb$DateTime, feb$Sub_metering_1)
+    lines(feb$DateTime, feb$Sub_metering_1, col="black")
     lines(feb$DateTime, feb$Sub_metering_2, col="red") 
     lines(feb$DateTime, feb$Sub_metering_3, col="blue") 
     dev.off()

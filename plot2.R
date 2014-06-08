@@ -12,6 +12,6 @@ plot2 <- function(){
     png("plot2.png")
     plot(feb$DateTime, as.numeric(as.character(feb$Global_active_power)), type = "n")
     plot(feb$DateTime, as.numeric(as.character(feb$Global_active_power)), type = "l", 
-                    ylab = "Global Active Power (kilowatt)", xlab = "")
+                    ylab = "Global Active Power (kilowatts)", xlab = "")
     dev.off()
 }

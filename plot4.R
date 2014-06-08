@@ -12,7 +12,8 @@ plot4 <- function(){
     png("plot4.png")
     
     par(mfrow = c(2,2)) 
-    with(feb, plot(DateTime, Global_active_power, type = "n", xlab = "")) 
+    with(feb, plot(DateTime, Global_active_power, type = "n", 
+                   xlab = "", ylab="Global Active Power")) 
     with(feb, lines(DateTime, Global_active_power)) 
     
     with(feb, plot(DateTime, Voltage, type = "n", xlab = "datetime"))
@@ -25,7 +26,8 @@ plot4 <- function(){
     lines(feb$DateTime, feb$Sub_metering_2, col="red") 
     lines(feb$DateTime, feb$Sub_metering_3, col="blue")  
     
-    with(feb, plot(DateTime, Global_reactive_power, type = "n", xlab = "datetime")) 
+    with(feb, plot(DateTime, Global_reactive_power, type = "n", 
+                   xlab = "datetime", ylab = "Global Reactive Power")) 
     with(feb, lines(DateTime, Global_reactive_power)) 
     
     dev.off()
